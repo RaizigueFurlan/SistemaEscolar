@@ -5,8 +5,113 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Escola_atv"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="492" Width="800">
+
+
+    <Grid Margin="0,10,-23,0" Height="481" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="817*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FF807F7F" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label RenderTransformOrigin="31.503,2.494" Content="Escola-Cadastro" FontSize="30" Margin="267,-10,301,397"/>
+        <Rectangle Stroke="Green" Margin="-421,192,-305,0" Height="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="567" Margin="390,192,0,0" Stroke="Green" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="2" Stroke="Green" VerticalAlignment="Top" Width="1788" Margin="-482,33,0,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.263"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-1.367"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="13" Margin="357,287,0,0" Stroke="Green" VerticalAlignment="Top" Width="5" Grid.Column="1"/>
+        <Rectangle HorizontalAlignment="Center" Height="2" Margin="0,454,0,0" Stroke="Green" VerticalAlignment="Top" Width="2136"/>
+        <Label Content="Nome" HorizontalAlignment="Left" Margin="105,65,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Informações" HorizontalAlignment="Left" Margin="4,26,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Razão Social" HorizontalAlignment="Left" Margin="482,64,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="insc: Estadual " HorizontalAlignment="Left" Margin="498,129,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="CNPJ" HorizontalAlignment="Left" Margin="69,124,0,0" VerticalAlignment="Top" FontSize="18" Height="30"/>
+        <TextBox x:Name="tb_nome" HorizontalAlignment="Left" Margin="63,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" Height="28"/>
+        <TextBox x:Name="tb_cnpj" HorizontalAlignment="Left" Margin="64,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Height="28"/>
+        <TextBox x:Name="tb_razaosocial" HorizontalAlignment="Left" Margin="443,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="28"/>
+        <TextBox x:Name="tb_inscestadual" HorizontalAlignment="Left" Margin="443,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="28"/>
+        <Label Content="Informações de propietário" HorizontalAlignment="Left" Margin="77,190,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Endereço e Contato" HorizontalAlignment="Left" Margin="515,186,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Tipo" HorizontalAlignment="Left" Margin="4,223,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.146,0.065"/>
+        <Label Content="Data de Criação" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641"/>
+        <TextBox x:Name="tb_responsave" HorizontalAlignment="Left" Margin="16,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="28"/>
+        <TextBox x:Name="tb_res_telefo" HorizontalAlignment="Left" Margin="219,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="28"/>
+        <Label Content="Responsavel" HorizontalAlignment="Left" Margin="16,348,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641"/>
+        <Label Content="Responsavel Telefone" HorizontalAlignment="Left" Margin="219,348,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641"/>
+        <DatePicker x:Name="tb_data" HorizontalAlignment="Left" Margin="4,298,0,0" VerticalAlignment="Top" Width="206" Height="32" FontSize="16"/>
+        <TextBox x:Name="tb_telefone" HorizontalAlignment="Left" Margin="413,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="28"/>
+        <Label Content="Telefone" HorizontalAlignment="Left" Margin="423,214,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641" Width="87"/>
+        <TextBox x:Name="tb_email" HorizontalAlignment="Left" Margin="615,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="28"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="629,214,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="1.17,0.577"/>
+        <TextBox x:Name="tb_rua" HorizontalAlignment="Left" Margin="413,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" Height="28"/>
+        <Label Content="Rua" HorizontalAlignment="Left" Margin="413,267,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641" Width="42"/>
+        <TextBox x:Name="tb_numerocasa" HorizontalAlignment="Left" Margin="671,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="28"/>
+        <Label Content="N°" HorizontalAlignment="Left" Margin="681,271,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.5,0.5" Width="34">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-3.439"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.94"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="tb_cep" HorizontalAlignment="Left" Margin="397,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Height="28"/>
+        <Label Content="CEP" HorizontalAlignment="Left" Margin="413,348,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641" Width="53"/>
+        <TextBox x:Name="tb_Cidade" HorizontalAlignment="Left" Margin="515,375,0,79" TextWrapping="Wrap" Width="136"/>
+        <Label Content="Cidade" HorizontalAlignment="Left" Margin="550,344,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641" Width="62"/>
+        <Label Content="Estado" HorizontalAlignment="Left" Margin="681,348,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641" Width="71"/>
+        <ComboBox x:Name="cb_Estado" HorizontalAlignment="Left" Margin="656,374,0,0" VerticalAlignment="Top" Width="135" Height="29" FontSize="16" SelectionChanged="cb_Estado_SelectionChanged">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem/>
+        </ComboBox>
+        <RadioButton x:Name="ra_publi" Content="Pública" HorizontalAlignment="Left" Margin="45,243,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="ra_priv" Content="Priváda" HorizontalAlignment="Left" Margin="112,246,0,0" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="740,210,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.353,-0.649" Click="Button_Click"/>
+        <TextBox x:Name="tb_bairro" HorizontalAlignment="Left" Margin="219,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="28"/>
+        <Label Content="Bairro" HorizontalAlignment="Left" Margin="229,243,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641" Width="87"/>
+        <TextBox x:Name="tb_comple" HorizontalAlignment="Left" Margin="677,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="28"/>
+        <Label Content="Complemento" HorizontalAlignment="Left" Margin="687,37,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641" Width="87"/>
+
+
+
+
+
     </Grid>
 </Window>
