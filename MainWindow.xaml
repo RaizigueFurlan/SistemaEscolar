@@ -92,22 +92,14 @@
         <TextBox x:Name="tb_Cidade" HorizontalAlignment="Left" Margin="515,375,0,79" TextWrapping="Wrap" Width="136"/>
         <Label Content="Cidade" HorizontalAlignment="Left" Margin="550,344,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641" Width="62"/>
         <Label Content="Estado" HorizontalAlignment="Left" Margin="681,348,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641" Width="71"/>
-        <ComboBox x:Name="cb_Estado" HorizontalAlignment="Left" Margin="656,374,0,0" VerticalAlignment="Top" Width="135" Height="29" FontSize="16" SelectionChanged="cb_Estado_SelectionChanged">
-            <ComboBox.Background>
-                <LinearGradientBrush EndPoint="0,1">
-                    <GradientStop Color="#FFF0F0F0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </ComboBox.Background>
-            <ComboBoxItem/>
-        </ComboBox>
         <RadioButton x:Name="ra_publi" Content="Pública" HorizontalAlignment="Left" Margin="45,243,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
         <RadioButton x:Name="ra_priv" Content="Priváda" HorizontalAlignment="Left" Margin="112,246,0,0" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="740,210,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.353,-0.649" Click="Button_Click"/>
         <TextBox x:Name="tb_bairro" HorizontalAlignment="Left" Margin="219,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="28"/>
         <Label Content="Bairro" HorizontalAlignment="Left" Margin="229,243,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641" Width="87"/>
         <TextBox x:Name="tb_comple" HorizontalAlignment="Left" Margin="677,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="28"/>
         <Label Content="Complemento" HorizontalAlignment="Left" Margin="687,37,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.609,0.641" Width="87"/>
+        <TextBox x:Name="tb_estado" HorizontalAlignment="Left" Margin="656,375,0,79" TextWrapping="Wrap" Width="136"/>
+        <Button x:Name="bt_agrvai" Content="salvar" HorizontalAlignment="Left" Margin="354,89,0,0" VerticalAlignment="Top" Click="bt_agrvai_Click"/>
 
 
 

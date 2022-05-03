@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
+using s
 
 namespace Escola_atv
 {
@@ -34,53 +35,67 @@ namespace Escola_atv
         private void cb_Estado_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
-}
+        }
 
-            private void Button_Click(object sender, RoutedEventArgs e)
+        private void bt_salvar (object sender, RoutedEventArgs e)
+        {
+           
+       }
+
+        private void bt_salvar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bt_agrvai_Click(object sender, RoutedEventArgs e)
+        {
+            string nomeFantasia = tb_nome.Text;
+            string razaoSocial = tb_razaosocial.Text;
+            string cnpj = tb_cnpj.Text;
+            string inscEstadual = tb_inscestadual.Text;
+            string tipo = "privada";
+            string responsavelEsc = tb_responsave.Text;
+            string telefoneRespon = tb_res_telefo.Text;
+            string email = tb_email.Text;
+            string telefone = tb_telefone.Text;
+            string rua = tb_rua.Text;
+            string numero = tb_numerocasa.Text;
+            string bairro = tb_bairro.Text;
+            string comple = tb_comple.Text;
+            string ceo = tb_cep.Text;
+            string cidade = tb_Cidade.Text;
+            string estado = tb_estado.Text;
+            
+
+
+
+            var data_criacao = tb_data.SelectedDate?.ToString("yyyy-mm-dd");
+
+
+            if ((bool)ra_publi.IsChecked)
+                tipo = "Publica";
+
+            var conecao = new MySqlConnection("server=localhost;database=bd_escola;port=3360;user=root;password=root");
+
+
+         
+
+            try
             {
-                string nomeFantasia = tb_nome.Text;
-                string razaoSocial = tb_razaosocial.Text;
-                string cnpj  = tb_cnpj.Text;
-                string inscEstadual = tb_inscestadual.Text;
-                string tipo = "Privada";
-                string dateCriacao = tb_data.Text;
-                string responsavelEsc = tb_responsave.Text;  
-                string telefoneRespon = tb_res_telefo.Text;   
-                string email = tb_email.Text;   
-                string telefone = tb_telefone.Text;  
-                string rua = tb_rua.Text;
-                string numero = tb_numerocasa.Text;
-                string bairro = tb_bairro.Text;
-                string comple = tb_comple.Text;
-                string ceo = tb_cep.Text;   
-                string cidade = tb_Cidade.Text;
-                string estado = cb_Estado.Text;
-                 
-             
 
-            var data_criacao = tb_data.SelectedDate?.ToString("yyyy-mm-dd"); 
+                conecao.Open();
+                var comando = conecao.CreateCommand();
 
+                comando.CommandText = "insert into escola values( @nome, @razão, @cnpj," +
+                 "@incEstad, @tipo, @data, @resposavel, @telefoRespon, @email, @telefone, @rua," +
+                  " @numero, @bairro, @complemento, @cep, @cidade, @estado); ";
 
-                if ((bool)ra_publi.IsChecked)
-                    tipo = " Publica";
-
-                var conecao = new MySqlConnection("server=Localhost;database=Bd_Escola;port=3360;password=root");
-                try
-                {
-                    conecao.Open(); 
-                    var comando = conecao.CreateCommand();  
-
-                    comando.CommandText = "insert into Escola values(null, @nome, @razão, @cnpj," + 
-                     "@incEstad, @tipo, @data, @resoponvel, @telefoRespon, @email, @telefone, @rua,"+
-                      " @numero, @bairro, @complemento, @cep, @cidade, @estado); " ;
-
-                comando.Parameters.AddWithValue("null", null);
                 comando.Parameters.AddWithValue("@nome", nomeFantasia);
                 comando.Parameters.AddWithValue("@razão", razaoSocial);
                 comando.Parameters.AddWithValue("@cnpj", cnpj);
                 comando.Parameters.AddWithValue("@incEstad", inscEstadual);
                 comando.Parameters.AddWithValue("@tipo", tipo);
-                comando.Parameters.AddWithValue("@data", dateCriacao);
+                comando.Parameters.AddWithValue("@data", data_criacao);
                 comando.Parameters.AddWithValue("@resposavel", responsavelEsc);
                 comando.Parameters.AddWithValue("@telefoRespon", telefoneRespon);
                 comando.Parameters.AddWithValue("@email", email);
@@ -95,28 +110,18 @@ namespace Escola_atv
 
 
 
-
-
-
-
-
-
-
-
                 var resultado = comando.ExecuteNonQuery();
-                
-                      if(resultado > 0)
-                    {
-                    MessageBox.Show("registro salvo com sucesso");
-                    } 
 
-                } catch (Exception ex)
+                if (resultado > 0)
                 {
-                MessageBox.Show(ex.Message);
+                    MessageBox.Show("registro salvo com sucesso");
                 }
 
-
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 

@@ -98,6 +98,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Escolaform.cs" />
     <Compile Include="Views\EscolaFormsWindow.xaml.cs">
       <DependentUpon>EscolaFormsWindow.xaml</DependentUpon>
     </Compile>
